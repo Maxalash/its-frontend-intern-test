@@ -95,6 +95,7 @@ img {
 .menu {
   float: right;
   width: 100%;
+  z-index: 20;
 }
 
 .menu>ul {
