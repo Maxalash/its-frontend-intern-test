@@ -49,17 +49,16 @@ img {
   height: 96px;
 }
 
-.logo-img img {
-  position: absolute;
-}
 
 #triangle {
+  position: absolute;
   width: 90%;
   top: 10px;
   left: 1.5px;
 }
 
 #traingle-flow {
+  position: absolute;
   width: 107%;
   top: 3px;
   margin-left: -6px;
@@ -93,7 +92,6 @@ img {
 .menu {
   float: right;
   width: 100%;
-  /* margin-top: -100px; */
 }
 
 .menu>ul {
