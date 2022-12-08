@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://allfont.net/allfont.css?fonts=source-sans-pro-semibold" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="style.css">
   <title>Penrose</title>
 </head>
@@ -13,23 +14,28 @@
   <div class="header">
     <div class="logo">
       <div class="logo-img">
-        <img src="images/triangle_glow.png" alt="" />
-        <img src="images/triangle.png" alt="triangle">
+        <img id="traingle-flow" src="images/triangle_glow.png" alt="" />
+        <img id="triangle" src="images/triangle.png" alt="triangle">
       </div>
-      <h1 class="logo-text">penrose</h1>
+      <div class="logo-text">
+        <h1>penrose</h1>
+      </div>
     </div>
+    <div class="gap"></div>
     <div class="menu">
-      <li class="menu-item">HOME</li>
-      <li class="menu-item">NEW COLLECTIONS</li>
-      <li class="menu-item">
-        <select name="select" id="menu_select" class="menu-select">
-          <option value="0">Select</option>
-          <option value="1">Women</option>
-          <option value="2">Men</option>
-          <option value="3">Kids</option>
-        </select>
-      </li>
-      <li class="menu-item"></li>
+      <ul>
+        <li class="menu-item" id="menu-home"><a href="/">HOME</a></li>
+        <li class="menu-item"> <a href="#">NEW COLLECTIONS</a> </li>
+        <li class="menu-item"> <a href="#">STORE ^^^^</a>
+          <!-- <select name="select" id="menu_select" class="menu-select">
+            <option value="0">Select</option>
+            <option value="1">Women</option>
+            <option value="2">Men</option>
+            <option value="3">Kids</option>
+          </select> -->
+        </li>
+        <li class="menu-item"> <a href="#">CONTACTS</a> </li>
+      </ul>
     </div>
   </div>
   <script src="index.js"></script>
