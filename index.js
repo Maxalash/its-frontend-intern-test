@@ -20,6 +20,18 @@ const initial = {
   3: {
     name: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
     price: "3.15"
+  },
+  4: {
+    name: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    price: "7.15"
+  },
+  5: {
+    name: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    price: "1.15"
+  },
+  6: {
+    name: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+    price: "4.64"
   }
 };
 
@@ -51,13 +63,49 @@ function listData(obj) {
       list.appendChild(liItem);
       const divpoint = document.createElement('div');
       divpoint.classList.add('slide-point');
-      console.log(divpoint);
       points.appendChild(divpoint);
     }
   });
   ul.appendChild(list);
-  console.log(points);
+  points.children[0].style.opacity = 1;
 }
 
 getData();
+
+// Slider functionality
+
+const buttonL = document.getElementById('lslide');
+const buttonR = document.getElementById('rslide');
+
+buttonR.onload = function(){
+  points.children[0].style.opacity = 1;
+}
+let order = 0;
+buttonR.addEventListener('click', ()=>{
+  if(order==0){
+    buttonL.style.visibility = "visible";
+  }
+  points.children[order].style.opacity = 0.3;
+  order++;
+  ul.style.marginLeft = "-"+(order*300+40)+"px";
+  points.children[order].style.opacity = 1;
+  if(order==ul.children.length-1){
+    buttonR.style.visibility = "hidden";
+  }
+});
+
+buttonL.addEventListener('click', ()=>{
+  if(order==ul.children.length-1){
+    buttonR.style.visibility = "visible";
+  }
+  points.children[order].style.opacity = 0.3;
+  order--;
+  ul.style.marginLeft = "-"+(order*300+40)+"px";
+  points.children[order].style.opacity = 1;
+  if(order==0){
+    buttonL.style.visibility = "hidden";
+  }
+});
+
+
 
