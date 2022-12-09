@@ -123,3 +123,21 @@ burger.addEventListener('click',()=>{
   }
 })
 
+// Store menu dropdown
+const select = document.getElementById('menu-select');
+const store = document.getElementById('menu-store');
+let selectToggle = true;
+store.addEventListener('click', ()=>{
+  if(selectToggle){
+    Object.values(select.children).map(item=>{
+      item.style.height = "max-content";
+    })
+    selectToggle = false;
+  }else{
+    Object.values(select.children).map(item=>{
+      item.style.height = "0";
+    })
+    selectToggle = true;
+  }
+})
+

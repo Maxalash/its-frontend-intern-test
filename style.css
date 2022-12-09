@@ -126,25 +126,42 @@ img {
 }
 
 #menu-select {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 45px;
-  overflow: hidden;
-  transition: height .2s;
-}
-
-#menu-select a {
-  visibility: hidden;
+  transition: height .4s;
 }
 
 #menu-store {
+  background-color: transparent;
   margin-top: -3px;
-  visibility: visible !important;
+  visibility: visible;
 }
+
 #menu-store div {
   display: inline-block;
   transform: rotate(90deg);
   margin-left: 10px;
+}
+
+#menu-store-list {
+  position: absolute;
+  top: 40px;
+  width: 100px;
+  height: 0;
+  border-radius:8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color:#fff;
+  margin-left: -10px;
+  overflow: hidden;
+}
+
+#menu-store-list a{
+  margin: 10px 0;
+  color: #00f;
 }
 
 .menu-burger {
