@@ -232,6 +232,7 @@ img {
   margin-left: -40px;
   display: flex;
   flex-direction: row;
+  transition: margin .5s;
 }
 
 .item-quote {
