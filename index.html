@@ -22,11 +22,16 @@
       </div>
     </div>
     <div class="gap"></div>
+    <button class="menu-burger" id="menu-burger"> &#926;</button>
     <div class="menu">
       <ul>
-        <li class="menu-item" id="menu-home"><a href="#">HOME</a></li>
-        <li class="menu-item"> <a href="#">NEW COLLECTIONS</a> </li>
-        <li class="menu-item"> <a href="#">STORE ^^^^</a>
+        <li class="menu-item" id="menu-home"><a href="#home">HOME</a></li>
+        <li class="menu-item"> <a href="#collections">NEW COLLECTIONS</a> </li>
+        <li class="menu-item" id="menu-select"> 
+          <a id="menu-store" href="#store">STORE <div>&#10095;</div></a>
+          <a href="#store/women">Women</a>
+          <a href="#store/men">Men</a>
+          <a href="#store/kids">Kids</a>
           <!-- <select name="select" id="menu_select" class="menu-select">
             <option value="0">Select</option>
             <option value="1">Women</option>
@@ -34,7 +39,26 @@
             <option value="3">Kids</option>
           </select> -->
         </li>
-        <li class="menu-item"> <a href="#">CONTACTS</a> </li>
+        <li class="menu-item"> <a href="#contacts">CONTACTS</a> </li>
+      </ul>
+    </div>
+    <div class="menu-slide" id="menu-slide">
+      <ul>
+        <li class="menu-item" id="menu-home"><a href="#home">HOME</a></li>
+        <li class="menu-item"> <a href="#collections">NEW COLLECTIONS</a> </li>
+        <li class="menu-item" id="menu-select"> 
+          <a id="menu-store" href="#store">STORE <div>&#10095;</div></a>
+          <a href="#store/women">Women</a>
+          <a href="#store/men">Men</a>
+          <a href="#store/kids">Kids</a>
+          <!-- <select name="select" id="menu_select" class="menu-select">
+            <option value="0">Select</option>
+            <option value="1">Women</option>
+            <option value="2">Men</option>
+            <option value="3">Kids</option>
+          </select> -->
+        </li>
+        <li class="menu-item"> <a href="#contacts">CONTACTS</a> </li>
       </ul>
     </div>
   </div>
@@ -56,14 +80,14 @@
     </div>
     <div class="slider-parent">
       <div class="slider">
-        <button class="slider-left">&#8249;</button>
+        <button class="slider-left" id="lslide">&#8249;</button>
         <div class="slider-container">
           <ul id="slides">
           </ul>
           <div class="slide-points" id="slide-points">
           </div>
         </div>
-        <button class="slider-right">&#8250;</button>
+        <button class="slider-right" id="rslide">&#8250;</button>
       </div>
 
     </div>
