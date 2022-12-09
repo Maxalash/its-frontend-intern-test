@@ -313,10 +313,11 @@ img {
 
   .main {
     width: 500px;
-    padding: 130px 0 0;
+    padding: 170px 0 0;
     display: grid;
     grid-template-columns: 1fr;
     background-size: 300px 700px;
+    transform: translateX(-30px);
   }
 
   .triangle {
