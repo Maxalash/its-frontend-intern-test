@@ -107,5 +107,19 @@ buttonL.addEventListener('click', ()=>{
   }
 });
 
+// Menu burger toggle
 
+const burger = document.getElementById('menu-burger');
+const menuSlide = document.getElementById('menu-slide');
+let toggle = true;
+
+burger.addEventListener('click',()=>{
+  if(toggle){
+    menuSlide.style.transform = "translateX(0%)";
+    toggle = false;
+  }else{
+    menuSlide.style.transform = "translateX(100%)";
+    toggle = true;
+  }
+})
 
