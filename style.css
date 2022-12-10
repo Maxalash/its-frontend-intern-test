@@ -8,6 +8,9 @@ body {
   margin: 0;
   background-color: #292929;
 }
+::-webkit-scrollbar{
+  display: none;
+}
 
 *,
 *::before,
@@ -183,7 +186,7 @@ img {
   top: 0;
   padding: 100px 0 20px;
   margin-left: -55px;
-  transform: translateX(100%);
+  transform: translateX(110%);
   transition: transform .5s;
   z-index: 30;
   background-color: #310043;
