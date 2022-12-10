@@ -121,7 +121,7 @@ burger.addEventListener('click', () => {
     menuSlide.style.transform = "translateX(0%)";
     toggle = false;
   } else {
-    menuSlide.style.transform = "translateX(100%)";
+    menuSlide.style.transform = "translateX(110%)";
     toggle = true;
   }
 })
