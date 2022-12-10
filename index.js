@@ -4,6 +4,9 @@ const ul = document.getElementById('slides');
 const points = document.getElementById('slide-points');
 const list = document.createDocumentFragment();
 
+const buttonL = document.getElementById('lslide');
+const buttonR = document.getElementById('rslide');
+
 const initial = {
   0: {
     name: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
@@ -39,7 +42,7 @@ listData(initial);
 
 async function getData() {
   try {
-    const response = await fetch(url)
+    await fetch(url)
       .then(data => {
         const result = data.json();
         listData(result);
@@ -65,17 +68,17 @@ function listData(obj) {
       divpoint.classList.add('slide-point');
       points.appendChild(divpoint);
     }
-  });
+  });  
+  ul.innerHTML = "";
   ul.appendChild(list);
   points.children[0].style.opacity = 1;
+  buttonL.style.visibility = "hidden";
 }
 
 getData();
 
 // Slider functionality
 
-const buttonL = document.getElementById('lslide');
-const buttonR = document.getElementById('rslide');
 
 buttonR.onload = function () {
   points.children[0].style.opacity = 1;
