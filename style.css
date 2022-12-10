@@ -509,6 +509,7 @@ img {
     margin-top: -90px;
     scale: 0.8;
     transform: translateX(-100px);
+    height: 550px;
   }
 
   #poster-title {
@@ -526,13 +527,13 @@ img {
   }
 
   .slider-parent {
-    transform: translateY(-600px);
-    scale: 0.3;
+    transform: translateY(-400px);
+    scale: 0.43;
   }
 
   .slider {
     left: 0;
-    margin-left: -470px;
+    margin-left: -320px;
     background-color: rgba(0, 0, 0, 0.474);
     border-radius: 10px;
     padding: 60px 0 10px;
