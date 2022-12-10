@@ -56,7 +56,7 @@ function listData(obj) {
   Object.keys(obj).map(function (key) {
     const item = initial[key];
     if (parseFloat(item.price) < 5.00) {
-      const legendText = '<div class="item-quote"> <div class="item-quote-text">'+item.name+'</div> <br /> <div class="item-quote-author">'+item.price+'</div> </div> ';
+      const legendText = '<div class="item-quote"> <div class="item-quote-text">' + item.name + '</div> <br /> <div class="item-quote-author">' + item.price + '</div> </div> ';
       const liItem = document.createElement('li');
       liItem.classList.add("slider-item")
       liItem.innerHTML = legendText;
@@ -77,32 +77,32 @@ getData();
 const buttonL = document.getElementById('lslide');
 const buttonR = document.getElementById('rslide');
 
-buttonR.onload = function(){
+buttonR.onload = function () {
   points.children[0].style.opacity = 1;
 }
 let order = 0;
-buttonR.addEventListener('click', ()=>{
-  if(order==0){
+buttonR.addEventListener('click', () => {
+  if (order == 0) {
     buttonL.style.visibility = "visible";
   }
   points.children[order].style.opacity = 0.3;
   order++;
-  ul.style.marginLeft = "-"+(order*300+40)+"px";
+  ul.style.marginLeft = "-" + (order * 300 + 40) + "px";
   points.children[order].style.opacity = 1;
-  if(order==ul.children.length-1){
+  if (order == ul.children.length - 1) {
     buttonR.style.visibility = "hidden";
   }
 });
 
-buttonL.addEventListener('click', ()=>{
-  if(order==ul.children.length-1){
+buttonL.addEventListener('click', () => {
+  if (order == ul.children.length - 1) {
     buttonR.style.visibility = "visible";
   }
   points.children[order].style.opacity = 0.3;
   order--;
-  ul.style.marginLeft = "-"+(order*300+40)+"px";
+  ul.style.marginLeft = "-" + (order * 300 + 40) + "px";
   points.children[order].style.opacity = 1;
-  if(order==0){
+  if (order == 0) {
     buttonL.style.visibility = "hidden";
   }
 });
@@ -113,11 +113,11 @@ const burger = document.getElementById('menu-burger');
 const menuSlide = document.getElementById('menu-slide');
 let toggle = true;
 
-burger.addEventListener('click',()=>{
-  if(toggle){
+burger.addEventListener('click', () => {
+  if (toggle) {
     menuSlide.style.transform = "translateX(0%)";
     toggle = false;
-  }else{
+  } else {
     menuSlide.style.transform = "translateX(100%)";
     toggle = true;
   }
@@ -130,11 +130,11 @@ burger.addEventListener('click',()=>{
 const store1 = document.getElementById('bar-store');
 let selectToggle1 = true;
 
-store1.addEventListener('click', ()=>{
-  if(selectToggle1){
+store1.addEventListener('click', () => {
+  if (selectToggle1) {
     store1.nextSibling.nextSibling.style.height = "max-content";
     selectToggle1 = false;
-  }else{
+  } else {
     store1.nextSibling.nextSibling.style.height = "0";
     selectToggle1 = true;
   }
@@ -145,11 +145,11 @@ store1.addEventListener('click', ()=>{
 const store2 = document.getElementById('burger-store');
 let selectToggle2 = true;
 
-store2.addEventListener('click', ()=>{
-  if(selectToggle2){
+store2.addEventListener('click', () => {
+  if (selectToggle2) {
     store2.nextSibling.nextSibling.style.height = "max-content";
     selectToggle2 = false;
-  }else{
+  } else {
     store2.nextSibling.nextSibling.style.height = "0";
     selectToggle2 = true;
   }
