@@ -124,20 +124,33 @@ burger.addEventListener('click',()=>{
 })
 
 // Store menu dropdown
-const select = document.getElementById('menu-select');
-const store = document.getElementById('menu-store');
-let selectToggle = true;
-store.addEventListener('click', ()=>{
-  if(selectToggle){
-    Object.values(select.children).map(item=>{
-      item.style.height = "max-content";
-    })
-    selectToggle = false;
-  }else{
-    Object.values(select.children).map(item=>{
-      item.style.height = "0";
-    })
-    selectToggle = true;
-  }
-})
 
+// Menu bar store:
+// const select = document.getElementsByClassName('menu-select');
+const store1 = document.getElementById('bar-store');
+let selectToggle1 = true;
+
+store1.addEventListener('click', ()=>{
+  if(selectToggle1){
+    store1.nextSibling.nextSibling.style.height = "max-content";
+    selectToggle1 = false;
+  }else{
+    store1.nextSibling.nextSibling.style.height = "0";
+    selectToggle1 = true;
+  }
+});
+
+// Menu burger store:
+// const select = document.getElementsByClassName('menu-select');
+const store2 = document.getElementById('burger-store');
+let selectToggle2 = true;
+
+store2.addEventListener('click', ()=>{
+  if(selectToggle2){
+    store2.nextSibling.nextSibling.style.height = "max-content";
+    selectToggle2 = false;
+  }else{
+    store2.nextSibling.nextSibling.style.height = "0";
+    selectToggle2 = true;
+  }
+});
